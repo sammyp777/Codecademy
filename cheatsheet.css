@@ -1,0 +1,120 @@
+:root {
+    --header-height: 60px; /* Ändere dies auf die tatsächliche Headerhöhe */
+} 
+
+header {
+    background-color: hsl(200, 85%, 31%);
+    border: black 1px ridge;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+header h1 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
+    font-weight: 900;
+    margin: 0;
+    padding: 0.5em;
+    text-align: center;
+}
+#nav-bar  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#nav-bar a {
+    box-sizing: border-box;
+    background-color: hsl(200, 25%, 49%);
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 4px 4px 1px 1px rgba(0, 0, 0, 0.5);
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    overflow-y: auto;
+    max-width: 200px;
+}
+
+#nav-bar a:hover {
+    background-color: hsl(156, 68%, 45%);
+    margin: 5px;
+    padding: 10px;
+    box-shadow: 5px 5px 2px 2px rgba(74, 205, 135, 0.5);
+    text-align: center;
+    text-decoration: none;
+    overflow-y: auto;
+    transition: margin 5s, color 5s;
+}
+
+body {
+    padding-top: var(--header-height);
+    text-align: center;
+}
+
+section {
+    padding-top: var(--header-height);
+}
+
+table {
+    border: rgb(12, 85, 175) 2px groove;
+    margin: 0 auto;
+    width: 80%;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    border-top: silver 1px solid;
+    padding-top: var(--header-height);
+}
+
+thead tr {
+    background-color: hsl(177, 20%, 62%);
+    text-transform: uppercase;
+}
+
+.tag {
+    width: 15%;
+}
+.name {
+    width: 10%;
+}
+.description {
+    width: 75%;
+}
+
+tbody .tag {
+    font-family: monospace;
+    background-color: khaki;
+    text-align: left;
+}
+
+tr {
+    background-color: hsl(185, 22%, 90%);
+}
+
+tbody .description {
+    font-size: small;
+    text-align: justify
+}
+
+tbody .name {
+    font-size:small;
+}
+
+span {
+    color: blue;
+}
+
+
