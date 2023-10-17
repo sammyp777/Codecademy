@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Webdev Cheatsheet</title>
+        <link rel="stylesheet" href="cheatsheet.css">
+    </head>
+    <body>
+        <header>
+            <h1>Webdeveloper Cheatsheet</h1>
+            <nav id="nav-bar">
+                <a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank" title="Documentation for Web developers">MDN Web Docs</a>
+                <a href="cheatsheet.html">HTML Semantik</a>
+                <a href="cheatsheet.html">CSS Selectors</a>
+                <a href="cheatsheet.html">Overflow-y</a>
+                <a href="cheatsheet.html">CSS Text Styling & Design</a>
+                <a href="cheatsheet.html">Navigation</a>
+                <a href="cheatsheet.html">Table</a>
+                <a href="#section7">CSS Box Model</a>
+                <a href="#section8">Display and Positioning</a>
+                <a href="#section9">CSS Position Properties</a>
+                <a href="#section10">Flexbox</a>
+            </nav>
+        </header>
+        <main>
+            <section id="section7">
+                <table>
+                    <thead>
+                        <h2>CSS Box Model</h2>
+                        <tr>
+                            <th class="tag">Tag</th>
+                            <th class="name">Name</th>
+                            <th class="description">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tag">width</td>
+                            <td class="name">Box Width</td>
+                            <td class="description">Breite des Inhaltsbereichs (content) eines Elements, ohne Rand und Padding.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">height</td>
+                            <td class="name">Box Height</td>
+                            <td class="description">Höhe des Inhaltsbereichs (content) eines Elements, ohne Rand und Padding.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">padding</td>
+                            <td class="name">Padding</td>
+                            <td class="description">Der Abstand zwischen dem Inhalt und dem Rand eines Elements.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">border</td>
+                            <td class="name">Border</td>
+                            <td class="description">Die Linie, die den Rand eines Elements umgibt.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">margin</td>
+                            <td class="name">Margin</td>
+                            <td class="description">Der äußere Abstand eines Elements, der den Raum zwischen den Rändern von Elementen festlegt.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">.element {
+                                box-sizing: border-box;}
+                            </td>
+                            <td class="name">Box-Sizing</td>
+                            <td class="description">Die Eigenschaft, die festlegt, wie die Größe eines Elements berechnet wird, entweder als <span>"content-box" (nur Inhalt), "padding-box" (Inhalt plus Padding) oder "border-box" (Inhalt plus Padding plus Border)</span>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="section8">
+                <table>
+                    <thead>
+                        <h2>DISPLAY AND POSITIONING</h2>
+                        <tr>
+                            <th class="tag">Tag</th>
+                            <th class="name">Name</th>
+                            <th class="description">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tag">display: ...</td>  
+                            <td class="name">CSS</td>
+                            <td class="description">Steuerung von Elementen</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;div&gt; <br>&lt;p&gt; <br>&lt;h1&gt; <br>&lt;ul&gt; <br>&lt;li&gt; <br></td>  
+                            <td class="name">block</td>
+                            <td class="description">
+                                <ul>
+                                    <li>Block-Elemente nehmen die gesamte verfügbare Breite ein und beginnen auf einer neuen Zeile</li>
+                                    <li>Sie können Höhe und Breite festlegen, Rand und Padding hinzufügen.</li>
+                                    <li>Block-Elemente können nicht nebeneinander angezeigt werden.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;span&gt; <br> &lt;a&gt; <br> &lt;strong&gt; <br> &lt;em&gt;</td>  
+                            <td class="name">inline</td>
+                            <td class="description">
+                                <ul>
+                                    <li>Inline-Elemente nehmen nur so viel Breite ein, wie für ihren Inhalt erforderlich ist, und bleiben in derselben Zeile wie der vorherige oder der nachfolgende Inhalt.</li>
+                                    <li>Sie können keine Höhe und Breite festlegen oder vertikalen Abstand hinzufügen.</li>
+                                    <li>Inline-Elemente können nebeneinander angezeigt werden.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tag"></td>  
+                            <td class="name">inline-block</td>
+                            <td class="description">
+                                <ul>
+                                    <li>Sie nehmen nur so viel Breite wie nötig ein, können jedoch Höhe, Breite, Rand und Padding festgelegt werden.</li>
+                                    <li>Kombiniert Eigenschaften von Inline- und Block-Elementen.</li>
+                                    <li>Sie verhalten sich wie Inline-Elemente und können nebeneinander angezeigt werden, ermöglichen jedoch das Einstellen von Höhe und Breite.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tag"></td>  
+                            <td class="name">flex</td>
+                            <td class="description">
+                                <ul>
+                                    <li>Dies ermöglicht die Verwendung von Flexbox-Layout. Mit Flexbox können Sie Elemente in einer Zeile oder Spalte anordnen und flexibel anpassen.</li>
+                                    <li>Flexbox bietet leistungsstarke Möglichkeiten zur Layout-Gestaltung.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tag"></td>  
+                            <td class="name">grid</td>
+                            <td class="description">
+                                <ul>
+                                    <li>Dies ermöglicht die Verwendung von Grid-Layout. Grid-Layout bietet eine 2D-Anordnung von Elementen in Zeilen und Spalten, was für komplexe Layouts nützlich ist.</li>
+                                    
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;position&gt;</td>  
+                            <td class="name">position</td>
+                            <td class="description">Die position-Eigenschaft ermöglicht es dir, die Position eines Elements auf einer Webseite festzulegen. Je nach Wert können Elemente relativ, absolut, fixiert oder klebrig positioniert werden, was ihre Positionierung auf der Seite beeinflusst.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;relative&gt;</td>  
+                            <td class="name">relative</td>
+                            <td class="description">Wenn die position-Eigenschaft auf "relative" gesetzt wird, ist die Position eines Elements relativ zu seiner Standardposition auf der Seite. Es kann verschoben werden, ohne den normalen Fluss des Dokuments zu beeinflussen.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;absolute&gt;</td>  
+                            <td class="name">absolute</td>
+                            <td class="description">Bei "absolute" ist die Position eines Elements relativ zum nächsten positionierten Elternelement. Es kann an beliebiger Stelle auf der Webseite verankert werden, bewegt sich jedoch immer mit dem Rest des Dokuments beim Scrollen.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;fixed&gt;</td>  
+                            <td class="name">fixed</td>
+                            <td class="description">"Fixed" ermöglicht es einem Element, an einer beliebigen Stelle auf der Webseite verankert zu bleiben, sodass es immer sichtbar bleibt, unabhängig von Scrollbewegungen.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;sticky&gt;</td>  
+                            <td class="name">sticky</td>
+                            <td class="description">"Sticky" ermöglicht es einem Element, sich in einem definierten Abstand zu seiner übergeordneten Containerposition zu verhalten. Es bleibt sichtbar, bis der Benutzer den Container scrollt, dann verhält es sich wie "fixed".</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;z-index&gt;</td>  
+                            <td class="name">z-index</td>
+                            <td class="description">Der z-index eines Elements gibt an, wie weit vorne oder hinten ein Element auf der Seite erscheint, wenn es mit anderen Elementen überlappt.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;display&gt;</td>  
+                            <td class="name">display</td>
+                            <td class="description">Die display-Eigenschaft ermöglicht die Steuerung des vertikalen und horizontalen Flusses eines Elements in einem Dokument. Sie kann Werte wie "inline", "block" oder "inline-block" haben, um das Verhalten des Elements zu ändern.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;float&gt;</td>  
+                            <td class="name">float</td>
+                            <td class="description">Die float-Eigenschaft kann Elemente so weit wie möglich nach links oder rechts auf einer Webseite bewegen. Dies wird häufig für Layoutzwecke verwendet, um Elemente nebeneinander anzuordnen.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;clear&gt;</td>  
+                            <td class="name">clear</td>
+                            <td class="description">Die clear-Eigenschaft wird verwendet, um das Entfernen von Elementen auf der linken, rechten Seite oder auf beiden Seiten eines zuvor geschwimmten Elements zu steuern.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;box model&gt;</td>  
+                            <td class="name">Box-Modell</td>
+                            <td class="description">Das Box-Modell beschreibt, wie Elemente auf einer Webseite gerendert werden. Es umfasst die Eigenschaften von Inhalt, Padding, Rand und Rahmen, die die Gesamtabmessungen eines Elements beeinflussen.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="section9">
+                <table>
+                    <thead>
+                        <h2>CSS Position Properties</h2>
+                        <tr>
+                            <th class="tag">Tag</th>
+                            <th class="name">Name</th>
+                            <th class="description">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tag">static</td>
+                            <td class="name">Position</td>
+                            <td class="description">Standardpositionierung (keine Anpassung)</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">relative</td>
+                            <td class="name">Position</td>
+                            <td class="description">Position relativ zum normalen Fluss, Verschiebung mit Top, Right, Bottom, Left</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">absolute</td>
+                            <td class="name">Position</td>
+                            <td class="description">Position relativ zum nächsten positionierten Elternelement, <span>Verschiebung mit Top, Right, Bottom, Left</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">fixed</td>
+                            <td class="name">Position</td>
+                            <td class="description">Position relativ zum Viewport, bleibt sichtbar, während Sie scrollen</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">sticky</td>
+                            <td class="name">Position</td>
+                            <td class="description">Position relativ zum Viewport bis zu einer bestimmten Bildlaufposition, dann verhält es sich wie 'fixed'</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section> 
+
+            <section id="section10">
+                <table>
+                    <thead>
+                        <h2>Flexbox</h2>
+                        <tr>
+                            <th class="tag">Tag</th>
+                            <th class="name">Name</th>
+                            <th class="description">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tag">justify-content</td>
+                            <td class="name">CSS</td>
+                            <td class="description">justify-content wird in erster Linie für die Ausrichtung und Anordnung von Elementen in Flexbox-Containern verwendet. Sie wirkt sich nicht direkt auf Text innerhalb von Elementen aus. justify-content steuert die horizontale (entlang der Hauptachse) Verteilung von Flexelementen im Container. Es gibt verschiedene Werte für justify-content, die beeinflussen, wie die Flexelemente im Container ausgerichtet werden.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">Hauptachse</td>
+                            <td class="name">CSS</td>
+                            <td class="description">In einem Flexbox-Container ist die Hauptachse die Hauptausrichtung, in der die Flexelemente angeordnet sind. Standardmäßig verläuft die Hauptachse horizontal von links nach rechts.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">display: flex;</td>
+                            <td class="name">Flexbox-Container</td>
+                            <td class="description">Mit "display: flex;" wird ein Element zu einem Blockcontainer mit Flexelementen im Inneren. Dies ist die Grundlage für Flexbox-Layouts.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">display: inline-flex;</td>
+                            <td class="name">Inline Flexbox-Container</td>
+                            <td class="description">Erlaubt es, mehrere Flexcontainer in einer Zeile anzuordnen.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">justify-content;</td>
+                            <td class="name">Horizontale Anordnung</td>
+                            <td class="description">Verwendet, um Elemente entlang der Hauptachse zu positionieren (z. B. horizontal auszurichten).</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">align-items;</td>
+                            <td class="name">Vertikale Anordnung</td>
+                            <td class="description">Verwendet, um Elemente entlang der Nebenachse zu positionieren (z. B. vertikal auszurichten).</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">flex-grow;</td>
+                            <td class="name">Flexibles Wachstum</td>
+                            <td class="description">Spezifiziert, wie viel Platz und in welchem Verhältnis Flexelemente entlang der Hauptachse absorbieren.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">flex-shrink;</td>
+                            <td class="name">Flexibles Schrumpfen</td>
+                            <td class="description">Spezifiziert, wie viel Flexelemente und in welchem Verhältnis sie entlang der Hauptachse schrumpfen.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">flex-basis;</td>
+                            <td class="name">Anfangsgröße</td>
+                            <td class="description">Definiert die anfängliche Größe eines Elements, wenn es mit flex-grow und/oder flex-shrink gestaltet wird.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">flex;</td>
+                            <td class="name">Flex-Shorthand</td>
+                            <td class="description">Ermöglicht die gleichzeitige Festlegung von flex-grow, flex-shrink und flex-basis in einer Deklaration.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">flex-wrap;</td>
+                            <td class="name">Umbruch</td>
+                            <td class="description">Bestimmt, ob Elemente entlang der Nebenachse verschoben werden sollen, wenn der Flexcontainer nicht ausreichend Platz bietet.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">align-content;</td>
+                            <td class="name">Anordnung von Zeilen</td>
+                            <td class="description">Verwendet, um Zeilen entlang der Nebenachse zu positionieren, insbesondere in mehrzeiligen Flexcontainern.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">flex-direction;</td>
+                            <td class="name">Richtung</td>
+                            <td class="description">Legt die Haupt- und Nebenachse des Flexcontainers fest.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">flex-flow;</td>
+                            <td class="name">Flexbox-Fluss</td>
+                            <td class="description">Ermöglicht die Festlegung von flex-wrap und flex-direction in einer einzigen Deklaration.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">Verschachtelung von Flexcontainern;</td>
+                            <td class="name">Flexbox-Verschachtelung</td>
+                            <td class="description">Durch Deklarieren von "display: flex;" oder "display: inline-flex;" für Kinder von Flexcontainern können verschachtelte Flexcontainer erstellt werden.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section> 
+        </main>
+    </body>
+</html>
