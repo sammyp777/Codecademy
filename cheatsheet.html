@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Webdev Cheatsheet</title>
+        <link rel="stylesheet" href="cheatsheet.css">
+    </head>
+    <body>
+        <header>
+            <h1>Webdeveloper Cheatsheet</h1>
+            <nav id="nav-bar">
+                <a href="https://developer.mozilla.org/en-US/docs/Web" target="_blank" title="Documentation for Web developers">MDN Web Docs</a>
+                <a href="#section1">HTML Semantik</a>
+                <a href="#section2">CSS Selectors</a>
+                <a href="#section3">Overflow-y</a>
+                <a href="#section4">CSS Text Styling & Design</a>
+                <a href="#section5">Navigation</a>
+                <a href="#section6">Table</a>
+                <a href="cheatsheet2.html" target="_blank">Box Model</a>
+                <a href="cheatsheet2.html" target="_blank">Navigation</a>
+                <a href="cheatsheet2.html" target="_blank">Flexbox</a>
+            </nav>
+        </header>
+        <main>
+            <section id="section1">
+                <table>
+                    <thead>
+                        <h2>HTML Semantik</h2>
+                        <tr>
+                            <th class="tag">Tag</th>
+                            <th class="name">Name</th>
+                            <th class="description">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tag">&lt;header&gt;</td>
+                            <td class="name">Header</td>
+                            <td class="description">Kopfbereich einer Webseite, der oft den Seitentitel und die Hauptnavigation enthält.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;nav&gt;</td>
+                            <td class="name">Navigation (Nav)</td>
+                            <td class="description">Nutzung zur Auszeichnung von Navigationsmenüs und -links, die die Benutzer durch die Website führen.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;main&gt;</td>
+                            <td class="name">Main</td>
+                            <td class="description">Markiert den Hauptinhalt einer Webseite und sollte nur einmal pro Seite verwendet werden.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;article&gt;</td>
+                            <td class="name">Article</td>
+                            <td class="description">Verwendung für eigenständige Inhalte wie Blogposts, Nachrichtenartikel oder Forenbeiträge.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;section&gt;</td>
+                            <td class="name">Section</td>
+                            <td class="description">Semantische Gruppierung von Inhalten zur Strukturierung von Abschnitten auf der Seite.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;aside&gt;</td>
+                            <td class="name">Aside</td>
+                            <td class="description">Enthält Inhalte, die nicht direkt mit dem Hauptinhalt in Verbindung stehen, wie z.B. Seitenspalten oder Anzeigen.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;footer&gt;</td>
+                            <td class="name">Footer</td>
+                            <td class="description">Markiert den Fußbereich einer Seite und enthält oft Copyright-Informationen, Kontaktinformationen oder Links zu sozialen Medien.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;address&gt;</td>
+                            <td class="name">Address</td>
+                            <td class="description">Wird verwendet, um Kontaktinformationen im Footer zu kennzeichnen, wie die physische Adresse des Unternehmens oder E-Mail-Adresse für Kontaktzwecke.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;p&gt;</td>
+                            <td class="name">Paragraph (P)</td>
+                            <td class="description">Verwendet zur Strukturierung von Absätzen und Textinhalt.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;div&gt;</td>
+                            <td class="name">Division (Div)</td>
+                            <td class="description">Allgemeines Container-Element zur Strukturierung und Gestaltung von Inhalten.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;span&gt;</td>
+                            <td class="name">Span</td>
+                            <td class="description">Inline-Element zur Anwendung von Stilen auf Text innerhalb eines Satzes oder Absatzes.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;em&gt;</td>
+                            <td class="name">Emphasis (Em)</td>
+                            <td class="description">Betonung von Textinhalten, standardmäßig kursiv dargestellt.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;br&gt;</td>
+                            <td class="name">Line Break (Br)</td>
+                            <td class="description">Erzeugt einen Zeilenumbruch innerhalb des Textes oder Inhalts.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;abbr&gt;</td>
+                            <td class="name">abbreviation</td>
+                            <td class="description">Beispiel steht "HTML" für "Hypertext Markup Language". Das abbr-Element enthält das Attribut title, das den vollständigen Text der Abkürzung oder des Akronyms enthält. Wenn der Benutzer die Maus über das abgekürzte Wort bewegt, wird in den meisten Webbrowsern ein Tooltip angezeigt, der den vollen Text anzeigt.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;meta&gt;, &lt;title&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;nav&gt;</td>
+                            <td class="name">Weitere semantische Elemente</td>
+                            <td class="description">HTML5 bietet weitere semantische Elemente wie <meta> (Metainformationen), <title> (Titel), <header> (Kopfbereich), <footer> (Fußbereich) und <nav> (Navigation) zur Verbesserung der Seitenstruktur und -bedeutung.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="section2">
+                <table>
+                    <thead>
+                        <h2>#ID .CLASS & SELECTOR</h2>
+                        <tr>
+                            <th class="tag">Tag</th>
+                            <th class="name">Name</th>
+                            <th class="description">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tag">.class <br> #id <br> selector</td>  
+                            <td class="name">CSS</td>
+                            <td class="description">
+                                <ul>
+                                    <li>ID-Selektoren: IDs sind eindeutig in einer HTML-Seite und sollten daher nur für ein einziges Element verwendet werden. ID-Selektoren haben eine hohe Priorität in CSS, was bedeutet, dass Stile, die mit ID-Selektoren definiert sind, stärker sind als Stile, die mit Klassen oder Elementselektoren definiert sind.</li>
+                                    <li>Klassen-Selektoren: Klassen können auf mehreren Elementen verwendet werden, und sie sind eine gute Möglichkeit, um Stile auf Gruppen von Elementen anzuwenden. Klassen haben eine geringere Priorität als IDs, aber eine höhere Priorität als Elementselektoren.</li>
+                                    <li>Elementselektoren: Elementselektoren wählen alle Instanzen eines bestimmten HTML-Elements aus und haben die niedrigste Priorität. Sie werden üblicherweise verwendet, um Standardstile für Elemente festzulegen.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tag">div#myId.myClass<br>div <span> (,)</span> .class {}</td>  
+                            <td class="name">kombinierte Selektoren <br> Mehrauswahl</td>
+                            <td class="description">Beachte Parent and Child Elemente</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">.myclass {color: blue <span>!important</span>}</td>  
+                            <td class="name">!Important</td>
+                            <td class="description">Höchste Priorität</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="section3">
+                <table>
+                    <thead>
+                        <h2>overflow-y</h2>
+                        <tr>
+                            <th class="tag">Tag</th>
+                            <th class="name">Name</th>
+                            <th class="description">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tag">overflow-y: auto;</td>
+                            <td class="name">Overflow-y</td>
+                            <td class="description">
+                                Overflow-y ist eine CSS-Eigenschaft, die auf Container-Elemente angewendet wird, um das Verhalten des vertikalen Scrollens innerhalb des Containers zu steuern.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tag">auto</td>
+                            <td class="name">Auto</td>
+                            <td class="description">
+                                Wenn der Inhalt im Container die verfügbare vertikale Höhe überschreitet, wird ein vertikaler Scrollbalken angezeigt, sodass Benutzer durch den Inhalt scrollen können. Wenn der Inhalt die verfügbare Höhe nicht überschreitet, wird kein Scrollbalken angezeigt.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tag">scroll</td>
+                            <td class="name">Scroll</td>
+                            <td class="description">
+                                In diesem Fall wird immer ein vertikaler Scrollbalken angezeigt, unabhängig davon, ob der Inhalt die verfügbare Höhe überschreitet oder nicht. Wenn der Inhalt die verfügbare Höhe nicht überschreitet, ist der Scrollbalken deaktiviert.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tag">visible</td>
+                            <td class="name">Sichtbar</td>
+                            <td class="description">
+                                Hier wird kein Scrollbalken angezeigt, selbst wenn der Inhalt die verfügbare Höhe des Containers überschreitet. Der Inhalt wird einfach über den Container hinaus angezeigt, was dazu führen kann, dass Teile des Inhalts unsichtbar sind.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tag">overflow-y</td>
+                            <td class="name">CSS-Eigenschaft</td>
+                            <td class="description">
+                                Diese CSS-Eigenschaft steuert das Scrollverhalten innerhalb eines Containers und dient zur Anzeige von vertikalem Scrollen, wenn der Inhalt die verfügbare Höhe überschreitet.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tag">display</td>
+                            <td class="name">CSS-Eigenschaft</td>
+                            <td class="description">
+                                Im Gegensatz zu overflow-y wird die "display"-Eigenschaft verwendet, um das Darstellungsverhalten von HTML-Elementen selbst zu steuern, einschließlich ihrer Positionierung, Art (Block, Inline, usw.), Layout-Verhalten und mehr.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="section4">
+                <table>
+                    <thead>
+                        <h2>CSS Text Styling & Design</h2>
+                        <tr>
+                            <th class="tag">Tag</th>
+                            <th class="name">Name</th>
+                            <th class="description">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tag">a {text-decoration: underline}</td>
+                            <td class="name">Text Decoration</td>
+                            <td class="description">Steuert die Dekoration von Text, z.B., "underline" (Unterstreichung), "line-through" (Durchgestrichen).</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">a:link, a:visited, a:hover, a:active</td>
+                            <td class="name">Link Styling (Pseudo-Klassen)</td>
+                            <td class="description">CSS-Pseudo-Klassen zur Definition von Stilen für Links in verschiedenen Zuständen: unbesucht, besucht, Mauszeiger darüber, aktiv.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag"> href="link" title="Tooltip"</td>
+                            <td class="name">Tooltip</td>
+                            <td class="description">Ein Tooltip ist ein Informationsfeld, das beim Überfahren eines Elements mit der Maus angezeigt wird.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag"> href="link" target="_blank"</td>
+                            <td class="name">link öffnen</td>
+                            <td class="description">Beim klicken des Links öffnet sich ein neuer Tab.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">a:link {}, :visited, :hover, :active, :focus, </td>
+                            <td class="name">Pseudo-Klassen</td>
+                            <td class="description">Beachte die Reihenfolge der Tags in CSS <br>CSS-Pseudo-Klassen, die Elemente in verschiedenen Zuständen ansprechen, wie Mauszeiger darüber (:hover), Mauszeiger aktiv (:active), oder Fokussierung (:focus).</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">transition: margin-right 2s, color 1s;</td>
+                            <td class="name">Transition</td>
+                            <td class="description">CSS-Übergangseigenschaften, die die Animation von Elementen ermöglichen, z.B., "margin-right 2s" (2 Sekunden Verzögerung), "color 1s" (1 Sekunde Verzögerung). Immer nach Pseudoclassen!</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">a {cursor: pointer} :help, :wait, :crosshair, :not-allowed, :zoom-in</td>
+                            <td class="name">Cursor Properties</td>
+                            <td class="description">Steuert das Erscheinungsbild des Mauszeigers, wenn er sich über einem Element befindet, z.B., "pointer" (Hand), "text" (Textcursor).</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">.skeuomorphic:active {z.B. Margin Change, box-shadow, background, ...}</td>
+                            <td class="name">Skeuomorphismus 3D</td>
+                            <td class="description">(Button Element) Ein Designstil, bei dem Elemente realen Gegenständen ähneln, mit realistischen Texturen und Schatten.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">.skeuomorphic:visited {der Button hebt sich nicht hervor}</td>
+                            <td class="name">Flat Design 2D</td>
+                            <td class="description">(Button Element) Ein minimalistischer Designstil, der auf Schatten und realistische Elemente verzichtet, um eine flache, zweidimensionale Ästhetik zu erzielen.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">letter-spacing, word-spacing</td>
+                            <td class="name">Letter & Word Spacing</td>
+                            <td class="description">Erlaubt die Anpassung des Abstands zwischen Buchstaben (letter-spacing) oder Wörtern (word-spacing) in Texten.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">text-transform: uppercase;</td>
+                            <td class="name">Text Transform</td>
+                            <td class="description">Steuert die Groß- und Kleinschreibung von Text, z.B., <span>"uppercase" (Großbuchstaben), "lowercase" (Kleinbuchstaben), "capitalize"</span> (Jeder Anfangsbuchstabe wird groß geschrieben).</td>
+                        </tr>
+                        <tr> 
+                            <td class="tag">.breadcrumb li+li::before {content: ">";}</td>
+                            <td class="name">Breadcrumb</td>
+                            <td class="description">Ein Breadcrumb ist eine Navigationshilfe, die den Pfad einer Seite anzeigt, z.B., "Home > About > Contact". Sie wird mit Listen verwendet. Zuvor sollte die Liste z. B. display: inline gesetzt werden. Auch text-decoration: none ist sinnvoll. Die letzt Seite der Liste sollte im html als href:"#" anzeigen. Für jede Seite gibt es eine Liste mit den verklinkungen zu den Seiten davor.</td>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="section5">
+                <table>
+                    <thead>
+                        <h2>Navigation und Navigation2 (Breadcrumbs)</h2>
+                        <tr>
+                            <th class="tag">Tag</th>
+                            <th class="name">Name</th>
+                            <th class="description">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tag">&lt;nav&gt;</td>  
+                            <td class="name">Navigationselement</td>
+                            <td class="description">Das <nav>-Element wird verwendet, um Navigationselemente auf einer Webseite zu definieren. Dies kann beispielsweise ein Menü oder ein Seitenleisten-Linkverzeichnis sein.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">.breadcrumb</td>  
+                            <td class="name">Breadcrumbs</td>
+                            <td class="description">Breadcrumbs sind eine Art der Navigation, die dem Benutzer den Pfad anzeigt, den er genommen hat, um zu einer bestimmten Seite zu gelangen. Sie sind besonders hilfreich auf großen und komplexen Websites.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">.breadcrumb li</td>  
+                            <td class="name">Breadcrumbs Listenelement</td>
+                            <td class="description">Listenelemente, die in Breadcrumbs verwendet werden, werden oft nebeneinander angeordnet, um den Pfad horizontal darzustellen.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">.breadcrumb a</td>  
+                            <td class="name">Breadcrumbs Link</td>
+                            <td class="description">Die Breadcrumbs-Links sind anklickbare Elemente, die den Benutzer zu den entsprechenden Seiten zurückführen. Sie können gestaltet werden, um den Benutzern anzuzeigen, auf welcher Seite sie sich gerade befinden.</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">.breadcrumb a::before und .breadcrumb a::after</td>  
+                            <td class="name">Brotkrumen-Navigationselementen</td>
+                            <td class="description">Diese Pseudoelemente (::before und ::after) fügen dreieckige Formen hinzu, um die Verbindung zwischen den Breadcrumbs darzustellen. Diese Formen haben die gleiche Farbe wie der Hintergrund (darkcyan), was sie anfangs unsichtbar macht. Wenn du jedoch mit der Maus über die Breadcrumbs fährst (hover), ändert sich die Farbe in Blau (blue). Verwende classen für Kategorie, Unterkategorie und Eigenschaften</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="section6">
+                <table>
+                    <thead>
+                        <h2>Table</h2>
+                        <tr>
+                            <th class="tag">Tag</th>
+                            <th class="name">Name</th>
+                            <th class="description">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tag">&lt;table&gt;<br>&lt;thead&gt;<br>&lt;tr&gt;<br>&lt;th&gt;</td>  
+                            <td class="name">Head</td>
+                            <td class="description">Table Head (Kopfzeile) Struktur</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;tbody&gt;<br>&lt;tr&gt;<br>&lt;td&gt;</td>  
+                            <td class="name">Body</td>
+                            <td class="description">Table Body Struktur</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;tfoot&gt;<br>&lt;tr&gt;<br>&lt;td&gt;</td>  
+                            <td class="name">Footer</td>
+                            <td class="description">Table Fußzeile</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;tr&gt;</td>  
+                            <td class="name">TableRow</td>
+                            <td class="description">Tabellen Zeile</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;td&gt;</td>  
+                            <td class="name">TableData</td>
+                            <td class="description">Datenzelle</td>
+                        </tr>
+                        <tr>
+                            <td class="tag">&lt;td colspan="2"&gt; <br> &lt;td rowspan="3"&gt;</td>  
+                            <td class="name">Verdindung</td>
+                            <td class="description">Zelle über 2 <span>Spalten</span> <br> Zelle über 3 <span>Zeilen</span> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </body>
+</html>
